@@ -5,25 +5,25 @@ import { ProductService } from '../../services/product.service';
 import { Product } from '../../models/product.model';
 
 @Component({
+  selector: 'app-products',
   standalone: true,
-  template: `
-<div class="container mt-4">
-  <div class="card mb-3" *ngFor="let p of products">
-    <div class="card-body">
-      <h5>{{p.name}}</h5>
-      <p>₹ {{p.price}}</p>
-      <a [routerLink]="['/product', p.id]" class="btn btn-sm btn-primary">View</a>
-    </div>
-  </div>
-</div>`,
-  imports: [CommonModule, RouterLink]
+  imports: [CommonModule, RouterLink],
+  templateUrl: './products.component.html',
+  styleUrls: ['./products.component.css'],
 })
 export class ProductsComponent implements OnInit {
+
   products: Product[] = [];
+  categories: string[] = ['All', 'Fruits', 'Vegetables', 'Dairy', 'Snacks'];
+  selectedCategory = 'All';
 
   constructor(private ps: ProductService) {}
 
   ngOnInit(): void {
     this.products = this.ps.getProducts();
+  }
+
+  selectCategory(cat: string) {
+    this.selectedCategory = cat;
   }
 }

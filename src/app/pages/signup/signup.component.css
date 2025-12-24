@@ -1,8 +1,7 @@
 
-/* Navbar in normal flow (scrolls with page) */
 .navbar {
-  position: relative;      /* not fixed */
-  height: 64px;            /* ensure this matches your real nav height */
+  position: relative;      
+  height: 64px;           
   background: #0d47a1;
   color: #fff;
   display: flex;
@@ -11,7 +10,6 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
-/* Full-page content below navbar, centered and scrollable */
 .signup-container {
   height: calc(100vh - 64px);         /* viewport height minus navbar */
   width: 100%;
@@ -24,7 +22,6 @@
   box-sizing: border-box;
 }
 
-/* Centered card (no absolute positioning) */
 .card {
   width: 100%;
   max-width: 500px;
@@ -68,7 +65,6 @@
 .password-bar.medium { background: #fb8c00; }
 .password-bar.strong { background: #43a047; }
 
-/* Primary submit button */
 .primary-btn {
   width: 100%;
   padding: 12px;

@@ -1,0 +1,32 @@
+<div class="page">
+
+  <aside class="sidebar">
+    <h3>Categories</h3>
+    <ul>
+      <li
+        *ngFor="let c of categories"
+        (click)="selectCategory(c)"
+        [class.active]="c === selectedCategory"
+      >
+        {{ c }}
+      </li>
+    </ul>
+  </aside>
+
+  <main class="products">
+    <div class="product-card" *ngFor="let p of products">
+      <img src="https://via.placeholder.com/200" alt="product" />
+
+      <h5>{{ p.name }}</h5>
+      <p class="price">₹ {{ p.price }}</p>
+
+      <a
+        [routerLink]="['/product', p.id]"
+        class="view-btn"
+      >
+        View
+      </a>
+    </div>
+  </main>
+
+</div>

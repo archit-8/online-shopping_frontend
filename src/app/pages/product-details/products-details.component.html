@@ -1,0 +1,40 @@
+ <div class="body">
+<div class="container">
+  <div class="card-wrapper">
+    <div class="product-card">
+      <div class="product-image">
+        <img [src]="product?.imageUrl" alt="{{ product?.name }}" />
+      </div>
+      <div class="product-info">
+        <h1 class="product-title">{{ product?.name }}</h1>
+
+        <p class="product-description">{{ product?.description }}</p>
+
+        <div class="product-price">
+          <span class="price">${{ product?.price }}</span>
+        </div>
+
+        <div class="delivery-info">
+          <p>Delivery in 3–5 days</p>
+        </div>
+
+        <div class="action-buttons">
+          <button class="btn btn-primary" (click)="cart.add(product)">Add to Cart</button>
+          <a routerLink="/cart" class="btn btn-secondary">Buy Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="colorful-section">
+    <div class="colorful-content">
+      <h3>Product Highlights</h3>
+      <ul>
+        <li><strong>Eco-friendly Materials</strong> - Made with sustainable, high-quality materials.</li>
+        <li><strong>Free Shipping</strong> - On all orders above $50.</li>
+        <li><strong>24/7 Customer Support</strong> - Always available to assist you with any questions.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>

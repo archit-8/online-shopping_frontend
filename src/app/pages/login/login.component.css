@@ -1,28 +1,14 @@
 
-/* src/app/login/login.component.css */
 
-/* Navbar in normal flow (scrolls with page) */
-.navbar {
-  position: relative;      /* not fixed */
-  height: 64px;            /* ensure this matches your real nav height */
-  background: #0d47a1;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  padding: 0 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-}
-
-/* Full-page content below navbar, centered and scrollable */
 .login-container {
-  height: calc(100vh - 64px);         /* viewport height minus navbar */
+  height: calc(100vh - 64px);        
   width: 100%;
   display: flex;
-  justify-content: center;            /* horizontal */
-  align-items: center;                /* vertical */
+  justify-content: center;            
+  align-items: center;               
   background: linear-gradient(90deg, hsla(205,46%,30%,1) 0%, hsla(260,29%,36%,1) 100%);
   padding: 24px;
-  overflow-y: auto;                   /* allow scroll if content grows */
+  overflow-y: auto;                   
   box-sizing: border-box;
 }
 
